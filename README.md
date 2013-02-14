@@ -4,13 +4,15 @@
 
 ## <a name="description"></a> Description
 
-coming soon...
+Chef cookbook to use [Searchef][searchef], a library to stub Chef searches. Cool, no?
 
 ## <a name="usage"></a> Usage
 
 ### <a name="usage-with-a-recipe"></a> With A Custom Recipe
 
 coming soon...
+
+For a more detailed example, see this cookbook's [test recipe][test_recipe].
 
 ## <a name="requirements"></a> Requirements
 
@@ -145,6 +147,8 @@ limitations under the License.
 [berkshelf]:        http://berkshelf.com/
 [chef_repo]:        https://github.com/opscode/chef-repo
 [librarian]:        https://github.com/applicationsonline/librarian#readme
+[searchef]:         https://github.com/fnichol/searchef
+[test_recipe]:      https://github.com/fnichol/chef-searchef/blob/master/test/cookbooks/stub_searches/recipes/default.rb
 
 [fnichol]:      https://github.com/fnichol
 [repo]:         https://github.com/fnichol/chef-searchef
