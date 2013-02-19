@@ -17,9 +17,6 @@
 # limitations under the License.
 #
 
-# include Searchef helps into this recipe
-self.extend(Searchef::API)
-
 def assert(test, msg = nil)
   msg ||= "An unnamed assertion"
   if test

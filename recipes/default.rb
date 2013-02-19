@@ -28,3 +28,10 @@ if Chef::Config[:solo]
   Chef::Log.info("Setting :client_key to nil for Solo mode")
   Chef::Config[:client_key] = nil
 end
+
+# mix Searchef helpers (stub_search, node_stub, etc.) into all recipes
+class Chef
+  class Recipe
+    include Searchef::API
+  end
+end
