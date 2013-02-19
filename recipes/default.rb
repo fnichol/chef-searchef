@@ -17,9 +17,14 @@
 # limitations under the License.
 #
 
-chef_gem "searchef"
-
-require 'searchef'
+begin
+  require 'searchef'
+rescue LoadError
+  run_context = Chef::RunContext.new(
+    Chef::Node.new, {}, Chef::EventDispatch::Dispatcher.new)
+  Chef::Resource::ChefGem.new('searchef', run_context).run_action(:install)
+  require 'searchef'
+end
 
 if Chef::Config[:solo]
   Chef::Log.info("Setting :node_name to '#{node['fqdn']}' for Solo mode")
