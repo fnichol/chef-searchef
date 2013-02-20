@@ -1,6 +1,6 @@
-# <a name="title"></a> chef-serachef
+# <a name="title"></a> chef-searchef
 
-[![Build Status](https://secure.travis-ci.org/fnichol/chef-serachef.png?branch=master)](http://travis-ci.org/fnichol/chef-serachef)
+[![Build Status](https://secure.travis-ci.org/fnichol/chef-searchef.png?branch=master)](http://travis-ci.org/fnichol/chef-searchef)
 
 ## <a name="description"></a> Description
 
