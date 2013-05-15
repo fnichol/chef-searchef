@@ -2,7 +2,7 @@
 driver_plugin: vagrant
 
 platforms:
-<% %w{11.4.0 10.24.0 10.12.0}.each do |chef_version| %>
+<% %w{11.4.4 10.26.0 10.12.0}.each do |chef_version| %>
 - name: ubuntu-12.10-chef-<%= chef_version %>
   driver_config:
     box: canonical-ubuntu-12.10
@@ -10,23 +10,23 @@ platforms:
     require_chef_omnibus: <%= chef_version %>
 - name: ubuntu-12.04-chef-<%= chef_version %>
   driver_config:
-    box: canonical-ubuntu-12.04
-    box_url: http://uec-images.ubuntu.com/vagrant/precise/current/precise-server-cloudimg-amd64-vagrant-disk1.box
+    box: opscode-ubuntu-12.04
+    box_url: https://opscode-vm.s3.amazonaws.com/vagrant/opscode_ubuntu-12.04_provisionerless.box
     require_chef_omnibus: <%= chef_version %>
 - name: ubuntu-10.04-chef-<%= chef_version %>
   driver_config:
     box: opscode-ubuntu-10.04
-    box_url: https://opscode-vm.s3.amazonaws.com/vagrant/boxes/opscode-ubuntu-10.04.box
+    box_url: https://opscode-vm.s3.amazonaws.com/vagrant/opscode_ubuntu-10.04_provisionerless.box
     require_chef_omnibus: <%= chef_version %>
 - name: centos-6.3-chef-<%= chef_version %>
   driver_config:
-    box: opscode-centos-6.3
-    box_url: https://opscode-vm.s3.amazonaws.com/vagrant/boxes/opscode-centos-6.3.box
+    box: opscode-centos-6.4
+    box_url: https://opscode-vm.s3.amazonaws.com/vagrant/opscode_centos-6.4_provisionerless.box
     require_chef_omnibus: <%= chef_version %>
 - name: centos-5.8-chef-<%= chef_version %>
   driver_config:
-    box: opscode-centos-5.8
-    box_url: https://opscode-vm.s3.amazonaws.com/vagrant/boxes/opscode-centos-5.8.box
+    box: opscode-centos-5.9
+    box_url: https://opscode-vm.s3.amazonaws.com/vagrant/opscode_centos-5.9_provisionerless.box
     require_chef_omnibus: <%= chef_version %>
 <% end %>
 
