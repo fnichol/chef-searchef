@@ -17,6 +17,8 @@
 # limitations under the License.
 #
 
+self.extend(Searchef::API)
+
 def assert(test, msg = nil)
   msg ||= "An unnamed assertion"
   if test
