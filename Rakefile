@@ -1,6 +1,7 @@
 #!/usr/bin/env rake
 
 require 'foodcritic'
+require 'emeril/rake'
 
 FoodCritic::Rake::LintTask.new do |t|
   t.options = { :fail_tags => ['any'] }
